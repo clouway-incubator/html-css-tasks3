@@ -15,17 +15,21 @@
             <ul>
                 <li><a href="/dir" target="_blank">Local directory</a></li>
                 <li><a href="/dir/lorem_ipsum.txt" target="_blank">Text file</a></li>
-                <li><a href="page.html" target="_blank">Another HTML page</a></li>
+                <li><a href="load-json.html" target="_blank">Another HTML page</a></li>
+            </ul>
+            <li>Load with AJAX</li>
+            <ul>
+                <li><a href="load-json.html">Load JSON file</a></li>
+            </ul>
+            <li>Validate form</li>
+            <ul>
+                <li><a href="form.html">Validate client-side with JavaScript</a></li>
             </ul>
         </ol>
     </div>
 
     <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <script src="bootstrap-4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#navigation').load('nav.html');
-        });
-    </script>
+    <script src="scripts/load-navbar.js"></script>
 </body>
 </html>
