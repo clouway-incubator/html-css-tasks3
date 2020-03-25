@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validator.js"></script>
+	
+</head>
+<body>
+<script>
+function hidePassword() { 
+            var pass = document.getElementById("typepass"); 
+            if (pass.type === "password") { 
+                pass.type = "text"; 
+            } 
+            else { 
+                pass.type = "password"; 
+            } 
+        } 
+</script>
+<form name="contactForm" onsubmit="return validateForm()" action="" method="post">
+    <h2>Application Form</h2>
+    <div class="row">
+        <label>First Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+	
+	   <div class="row">
+        <label>Last Name</label>
+        <input type="text" name="last">
+        <div class="error" id="lastErr"></div>
+    </div>
+
+    <div class="row">
+        <label>EGN</label>
+        <input type="text" name="egn">
+        <div class="error" id="egnErr"></div>
+    </div>
+	
+	  <div class="row">
+        <label>Age</label>
+        <input type="text" name="age">
+        <div class="error" id="ageErr"></div>
+    </div>
+	
+		  <div class="row">
+        <label>Address</label>
+        <input type="text" name="address">
+        <div class="error" id="addressErr"></div>
+    </div>      
+	
+		
+		  <div class="row">
+        <label>Password</label>
+        <input type="text" name="pass" id="typepass" onclick="hidePassword()">
+        <div class="error" id="passErr"></div>
+    </div>   
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>
